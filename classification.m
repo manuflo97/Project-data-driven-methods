@@ -4,7 +4,7 @@ clear all
 outFolder = fullfile('caltech101');
 rootFolder = fullfile(outFolder, '101_ObjectCategories');
 
-categories = {'airplanes', 'rhino', 'ferry', 'laptop', 'brain', 'wheelchair', 'umbrella', 'wild_cat', 'watch', 'dolphin'}; %Categories on which we are going to work with (can be expanded or changed
+categories = {'airplanes', 'rhino', 'ferry', 'laptop', 'brain', 'wheelchair', 'umbrella', 'wild_cat', 'watch', 'dolphin'}; %Categories on which we are going to work with (can be expanded or changed)
 
 imds = imageDatastore(fullfile(rootFolder,categories), 'LabelSource','foldernames'); %Images of the categories we chose are now here with appropriate labels
 
