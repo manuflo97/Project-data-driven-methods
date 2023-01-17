@@ -56,7 +56,7 @@ featureLayer = 'fc1000';
 trainingFeatures = activations(net, AugmentedTrainingSet, ...
     featureLayer, 'MiniBatchSize', 32, 'OutputAs', 'columns');
 
-trainingLabels = trainingSet.Labels;
+trainingLabels = trainingSet.Labels; %Levels of the training set
 classifier = fitcecoc(trainingFeatures, trainingLabels, 'Learner', 'Linear', ...
     'Coding', 'onevsall', 'ObservationsIn', 'columns'); %Returns a trained model and stores it
 
